@@ -6,11 +6,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.zsw.zeng.helloapplication.banner.BannerActivity;
+import com.zsw.zeng.helloapplication.mvp.MvpActivity;
 import com.zsw.zeng.helloapplication.noslide.NoSlideActivity;
 import com.zsw.zeng.helloapplication.slide.SlideActivity;
-import com.zsw.zeng.helloapplication.status.SecondStatusActivity;
-import com.zsw.zeng.helloapplication.status.SystemStatusActivity;
-import com.zsw.zeng.helloapplication.status.ThirdStatusActivity;
+import com.zsw.zeng.helloapplication.status.StatusActivity;
 
 /**
  * @author zeng
@@ -21,9 +21,9 @@ public class MainActivity extends Activity {
 
     private Button noslide;
     private Button isslide;
-    private Button systemStatus;
-    private Button secondStatus;
-    private Button thirdStatus;
+    private Button status;
+    private Button mvp;
+    private Button banner;
     private Intent intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,9 +31,9 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         noslide = (Button) findViewById(R.id.noslide);
         isslide = (Button) findViewById(R.id.isslide);
-        systemStatus = (Button) findViewById(R.id.system_status);
-        secondStatus = (Button) findViewById(R.id.second_status);
-        thirdStatus = (Button) findViewById(R.id.third_status);
+        status = (Button) findViewById(R.id.status);
+        mvp = (Button) findViewById(R.id.mvp);
+        banner = (Button) findViewById(R.id.banner);
         noslide.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -50,27 +50,28 @@ public class MainActivity extends Activity {
                 startActivity(intent);
             }
         });
-        systemStatus.setOnClickListener(new View.OnClickListener() {
+        status.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //跳转到系统实现沉浸式状态栏
-                intent = new Intent(MainActivity.this, SystemStatusActivity.class);
+                //跳转到沉浸式状态栏
+                intent = new Intent(MainActivity.this,StatusActivity.class);
                 startActivity(intent);
             }
         });
-        secondStatus.setOnClickListener(new View.OnClickListener() {
+
+        mvp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //跳转到系统实现沉浸式状态栏
-                intent = new Intent(MainActivity.this, SecondStatusActivity.class);
+                intent = new Intent(MainActivity.this, MvpActivity.class);
                 startActivity(intent);
             }
         });
-        thirdStatus.setOnClickListener(new View.OnClickListener() {
+        banner.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //跳转到系统实现沉浸式状态栏
-                intent = new Intent(MainActivity.this, ThirdStatusActivity.class);
+                intent = new Intent(MainActivity.this, BannerActivity.class);
                 startActivity(intent);
             }
         });
