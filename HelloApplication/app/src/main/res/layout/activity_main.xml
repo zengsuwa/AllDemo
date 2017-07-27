@@ -31,4 +31,10 @@
         android:layout_height="wrap_content"
         android:textAllCaps="false"
         android:text="Viewpager实现Banner" />
+    <Button
+        android:id="@+id/selfview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="自定义控件" />
 </LinearLayout>

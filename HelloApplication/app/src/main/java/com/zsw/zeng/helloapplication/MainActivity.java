@@ -24,6 +24,7 @@ public class MainActivity extends Activity {
     private Button status;
     private Button mvp;
     private Button banner;
+    private Button selfview;
     private Intent intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +35,7 @@ public class MainActivity extends Activity {
         status = (Button) findViewById(R.id.status);
         mvp = (Button) findViewById(R.id.mvp);
         banner = (Button) findViewById(R.id.banner);
+        selfview = (Button) findViewById(R.id.selfview);
         noslide.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -75,5 +77,14 @@ public class MainActivity extends Activity {
                 startActivity(intent);
             }
         });
+        selfview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //跳转到自定义控件
+                intent = new Intent(MainActivity.this, SelfViewActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
