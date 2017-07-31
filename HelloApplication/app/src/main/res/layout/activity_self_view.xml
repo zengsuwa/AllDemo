@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,6 +11,21 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.zsw.zeng.helloapplication.SelfViewActivity">
+    <com.zsw.zeng.helloapplication.widget.MyTopBar
+        android:id="@+id/myTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        custom:mytitle="自定义标题"
+        custom:mytitleTextSize="8sp"
+        custom:mytitleTextColor="#000"
+        custom:leftText="back"
+        custom:leftTextColor="#FFF"
+        custom:leftBackground="@android:color/holo_green_dark"
+        custom:rightText="more"
+        custom:rightTextColor="#FFF"
+        custom:rightBackground="@android:color/holo_green_dark">
+
+    </com.zsw.zeng.helloapplication.widget.MyTopBar>
 
     <TextView
         android:layout_width="wrap_content"
@@ -34,6 +50,18 @@
         android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="创建复合控件："/>
+        android:textSize="14dp"
+        android:text="创建复合控件：如标题"/>
+
+    <com.zsw.zeng.helloapplication.widget.CircleView
+        android:id="@+id/arc"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        custom:arcAngle="50"
+        custom:arcColor="#00ff00"
+        custom:arcWidth="40"
+        custom:centerCircleColor="#00ff00"
+        custom:centerFontSize="14dp"
+        custom:centerTextColor="#f33" />
 
 </LinearLayout>
