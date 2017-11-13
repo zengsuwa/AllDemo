@@ -41,6 +41,11 @@ public class SlideActivity extends FragmentActivity {
         fragments.add(myFragment2);
         fragments.add(heFragment2);
 
+        //在Activity中向fragment传值
+        Bundle bundle = new Bundle();
+        bundle.putString("content","hahah");
+        myFragment2.setArguments(bundle);
+
         FragmentManager fm = getSupportFragmentManager();
 
         viewPager.setOffscreenPageLimit(2);
@@ -52,6 +57,7 @@ public class SlideActivity extends FragmentActivity {
         initEvent();
 
     }
+    
 
     private void initEvent() {
         viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {

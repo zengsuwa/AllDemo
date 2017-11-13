@@ -8,6 +8,8 @@ import android.graphics.RectF;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.zsw.zeng.helloapplication.R;
 
@@ -119,4 +121,5 @@ public class CircleView extends View {
 
         invalidate();
     }
+
 }

@@ -64,4 +64,14 @@
         custom:centerFontSize="14dp"
         custom:centerTextColor="#f33" />
 
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="5dp"
+        android:scrollbars="none"
+        android:listSelector="@android:color/transparent"
+
+        ></ListView>
+
 </LinearLayout>

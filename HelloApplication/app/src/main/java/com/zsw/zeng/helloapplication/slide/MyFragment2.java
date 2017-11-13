@@ -41,6 +41,10 @@ public class MyFragment2 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_my2, container, false);
+
+        Bundle bundle = this.getArguments();
+        String content = bundle.getString("content");
+
         draweeView1 = (SimpleDraweeView) view.findViewById(R.id.image);
         draweeView2 = (SimpleDraweeView) view.findViewById(R.id.image2);
         btnAdd = (Button) view.findViewById(R.id.btn_add);

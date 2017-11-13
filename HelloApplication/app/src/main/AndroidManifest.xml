@@ -54,6 +54,8 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".SelfViewActivity">
         </activity>
+        <activity android:name=".fragmentlearn.LearnActivity">
+        </activity>
     </application>
 
 </manifest>
