@@ -3,10 +3,13 @@ package com.zsw.zeng.helloapplication;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.SurfaceView;
 import android.view.View;
 import android.widget.Button;
 
+import com.zsw.zeng.helloapplication.activity.SurfaceActivity;
 import com.zsw.zeng.helloapplication.banner.BannerActivity;
+import com.zsw.zeng.helloapplication.coordinator.CoordinatorActivity;
 import com.zsw.zeng.helloapplication.mvp.MvpActivity;
 import com.zsw.zeng.helloapplication.noslide.NoSlideActivity;
 import com.zsw.zeng.helloapplication.slide.SlideActivity;
@@ -25,6 +28,8 @@ public class MainActivity extends Activity {
     private Button mvp;
     private Button banner;
     private Button selfview;
+    private Button coordinator;
+    private Button surface;
     private Intent intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +41,8 @@ public class MainActivity extends Activity {
         mvp = (Button) findViewById(R.id.mvp);
         banner = (Button) findViewById(R.id.banner);
         selfview = (Button) findViewById(R.id.selfview);
+        coordinator = (Button) findViewById(R.id.coordinator);
+        surface = (Button) findViewById(R.id.surfaceview);
         noslide.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -82,6 +89,22 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 //跳转到自定义控件
                 intent = new Intent(MainActivity.this, SelfViewActivity.class);
+                startActivity(intent);
+            }
+        });
+        coordinator.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //跳转到自定义控件
+                intent = new Intent(MainActivity.this, CoordinatorActivity.class);
+                startActivity(intent);
+            }
+        });
+        surface.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //跳转到自定义控件
+                intent = new Intent(MainActivity.this, SurfaceActivity.class);
                 startActivity(intent);
             }
         });
