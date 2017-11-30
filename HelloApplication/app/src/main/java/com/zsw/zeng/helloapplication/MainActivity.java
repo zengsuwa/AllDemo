@@ -7,6 +7,7 @@ import android.view.SurfaceView;
 import android.view.View;
 import android.widget.Button;
 
+import com.zsw.zeng.helloapplication.activity.AnimationActivity;
 import com.zsw.zeng.helloapplication.activity.SurfaceActivity;
 import com.zsw.zeng.helloapplication.banner.BannerActivity;
 import com.zsw.zeng.helloapplication.coordinator.CoordinatorActivity;
@@ -30,6 +31,8 @@ public class MainActivity extends Activity {
     private Button selfview;
     private Button coordinator;
     private Button surface;
+    private Button animation;
+    private Button apkinfo;
     private Intent intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +46,8 @@ public class MainActivity extends Activity {
         selfview = (Button) findViewById(R.id.selfview);
         coordinator = (Button) findViewById(R.id.coordinator);
         surface = (Button) findViewById(R.id.surfaceview);
+        animation = (Button) findViewById(R.id.animation);
+        apkinfo = (Button) findViewById(R.id.apkinfo);
         noslide.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -105,6 +110,22 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 //跳转到自定义控件
                 intent = new Intent(MainActivity.this, SurfaceActivity.class);
+                startActivity(intent);
+            }
+        });
+        animation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //跳转到动画框架
+                intent = new Intent(MainActivity.this, AnimationActivity.class);
+                startActivity(intent);
+            }
+        });
+        apkinfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //跳转到动画框架
+                intent = new Intent(MainActivity.this, AnimationActivity.class);
                 startActivity(intent);
             }
         });

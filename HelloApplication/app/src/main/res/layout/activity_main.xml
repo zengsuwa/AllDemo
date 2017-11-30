@@ -50,4 +50,16 @@
         android:layout_height="wrap_content"
         android:textAllCaps="false"
         android:text="SurfaceView学习" />
+    <Button
+        android:id="@+id/animation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Android view动画框架学习" />
+    <Button
+        android:id="@+id/apkinfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Android Apk应用信息获取" />
 </LinearLayout>
