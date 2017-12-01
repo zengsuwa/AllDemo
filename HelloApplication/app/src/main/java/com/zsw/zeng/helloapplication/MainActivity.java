@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.zsw.zeng.helloapplication.activity.AnimationActivity;
+import com.zsw.zeng.helloapplication.activity.ApkInfoActivity;
 import com.zsw.zeng.helloapplication.activity.SurfaceActivity;
 import com.zsw.zeng.helloapplication.banner.BannerActivity;
 import com.zsw.zeng.helloapplication.coordinator.CoordinatorActivity;
@@ -108,7 +109,7 @@ public class MainActivity extends Activity {
         surface.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //跳转到自定义控件
+                //跳转到Surface
                 intent = new Intent(MainActivity.this, SurfaceActivity.class);
                 startActivity(intent);
             }
@@ -125,7 +126,7 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 //跳转到动画框架
-                intent = new Intent(MainActivity.this, AnimationActivity.class);
+                intent = new Intent(MainActivity.this, ApkInfoActivity.class);
                 startActivity(intent);
             }
         });
