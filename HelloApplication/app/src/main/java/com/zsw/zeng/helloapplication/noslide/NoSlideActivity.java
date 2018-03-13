@@ -59,8 +59,8 @@ public class NoSlideActivity extends Activity implements View.OnClickListener {
 
     private void select(int i) {
         FragmentManager fm = getFragmentManager();
-        FragmentTransaction ft = fm.beginTransaction();
-        hidtFragment(ft);
+        FragmentTransaction ft = fm.beginTransaction() ;
+        hideFragment(ft);
         switch (i) {
             case 0:
                 if (youFragment == null) {
@@ -99,7 +99,7 @@ public class NoSlideActivity extends Activity implements View.OnClickListener {
     }
 
     //隐藏所有Fragment
-    private void hidtFragment(FragmentTransaction fragmentTransaction) {
+    private void hideFragment(FragmentTransaction fragmentTransaction) {
         if (myFragment != null) {
             fragmentTransaction.hide(myFragment);
         }

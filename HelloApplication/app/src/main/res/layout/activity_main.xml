@@ -37,7 +37,6 @@
         android:layout_height="wrap_content"
         android:textAllCaps="false"
         android:text="自定义控件" />
-
     <Button
         android:id="@+id/coordinator"
         android:layout_width="match_parent"
@@ -62,4 +61,16 @@
         android:layout_height="wrap_content"
         android:textAllCaps="false"
         android:text="Android Apk应用信息获取" />
+    <Button
+        android:id="@+id/scheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Android 跳转协议" />
+    <Button
+        android:id="@+id/servicetest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="service 学习" />
 </LinearLayout>

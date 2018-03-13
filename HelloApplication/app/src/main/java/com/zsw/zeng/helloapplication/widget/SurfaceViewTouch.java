@@ -47,7 +47,6 @@ public class SurfaceViewTouch extends SurfaceView implements SurfaceHolder.Callb
     private void initViews() {
         mHolder = getHolder();
 
-
         mPath = new Path();
         mPaint = new Paint();
         mHolder.addCallback(this);
@@ -104,7 +103,7 @@ public class SurfaceViewTouch extends SurfaceView implements SurfaceHolder.Callb
             mCanvas.drawColor(Color.WHITE);
             mCanvas.drawPath(mPath,mPaint);
         } catch (Exception e) {
-
+            e.printStackTrace();
         }
         finally {
             if (mCanvas != null) {

@@ -9,6 +9,8 @@ import android.widget.Button;
 
 import com.zsw.zeng.helloapplication.activity.AnimationActivity;
 import com.zsw.zeng.helloapplication.activity.ApkInfoActivity;
+import com.zsw.zeng.helloapplication.activity.SchemeActivity;
+import com.zsw.zeng.helloapplication.activity.ServiceTestActivity;
 import com.zsw.zeng.helloapplication.activity.SurfaceActivity;
 import com.zsw.zeng.helloapplication.banner.BannerActivity;
 import com.zsw.zeng.helloapplication.coordinator.CoordinatorActivity;
@@ -34,6 +36,8 @@ public class MainActivity extends Activity {
     private Button surface;
     private Button animation;
     private Button apkinfo;
+    private Button scheme;
+    private Button serviceTest;
     private Intent intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +53,8 @@ public class MainActivity extends Activity {
         surface = (Button) findViewById(R.id.surfaceview);
         animation = (Button) findViewById(R.id.animation);
         apkinfo = (Button) findViewById(R.id.apkinfo);
+        scheme = (Button) findViewById(R.id.scheme);
+        serviceTest = (Button) findViewById(R.id.servicetest);
         noslide.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -125,8 +131,24 @@ public class MainActivity extends Activity {
         apkinfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //跳转到动画框架
+                //跳转到包信息
                 intent = new Intent(MainActivity.this, ApkInfoActivity.class);
+                startActivity(intent);
+            }
+        });
+        scheme.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //跳转到scheme跳转协议
+                intent = new Intent(MainActivity.this, SchemeActivity.class);
+                startActivity(intent);
+            }
+        });
+        serviceTest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Service学习
+                intent = new Intent(MainActivity.this, ServiceTestActivity.class);
                 startActivity(intent);
             }
         });

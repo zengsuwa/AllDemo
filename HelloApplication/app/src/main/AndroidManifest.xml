@@ -66,6 +66,22 @@
         </activity>
         <activity android:name=".activity.AMProcessActivity">
         </activity>
+        <activity
+            android:name=".activity.SchemeActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data android:scheme="andy"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.ServiceTestActivity">
+        </activity>
+
+        <service android:name=".service.StartService"/>
+        <service android:name=".service.BindService"/>
     </application>
 
 </manifest>

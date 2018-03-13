@@ -23,6 +23,8 @@ public class HeFragment extends Fragment {
         tv = (TextView) view.findViewById(R.id.tv);
         button = (Button) view.findViewById(R.id.button);
         message = tv.getText().toString();
+        //在fragment中调用fragment中的方法 在xml布局中有fragment标签 id为fragment1
+//        getActivity().getFragmentManager().findFragmentById(R.id.fragment1);
         return view;
     }
     @Override
