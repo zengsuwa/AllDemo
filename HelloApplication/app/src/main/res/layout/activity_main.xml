@@ -1,76 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/noslide"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="不滑动的主题" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/isslide"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="滑动的主题" />
-    <Button
-        android:id="@+id/status"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="沉浸式状态栏" />
-    <Button
-        android:id="@+id/mvp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="mvp模式" />
-    <Button
-        android:id="@+id/banner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="Viewpager实现Banner" />
-    <Button
-        android:id="@+id/selfview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="自定义控件" />
-    <Button
-        android:id="@+id/coordinator"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="CoordinatorLayout学习" />
-    <Button
-        android:id="@+id/surfaceview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="SurfaceView学习" />
-    <Button
-        android:id="@+id/animation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="Android view动画框架学习" />
-    <Button
-        android:id="@+id/apkinfo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="Android Apk应用信息获取" />
-    <Button
-        android:id="@+id/scheme"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="Android 跳转协议" />
-    <Button
-        android:id="@+id/servicetest"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="service 学习" />
-</LinearLayout>
+        <Button
+            android:id="@+id/noslide"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="不滑动的主题" />
+
+        <Button
+            android:id="@+id/isslide"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="滑动的主题" />
+
+        <Button
+            android:id="@+id/status"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="沉浸式状态栏" />
+
+        <Button
+            android:id="@+id/mvp"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="mvp模式" />
+
+        <Button
+            android:id="@+id/banner"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Viewpager实现Banner"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/selfview"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="自定义控件"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/coordinator"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CoordinatorLayout学习"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/surfaceview"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SurfaceView学习"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/animation"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Android view动画框架学习"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/apkinfo"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Android Apk应用信息获取"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/scheme"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Android 跳转协议"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/servicetest"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="service 学习"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/actionBtn"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Action 学习"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/pickerViewBtn"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Action 仿IOS可一二三级联动PickerView"
+            android:textAllCaps="false" />
+    </LinearLayout>
+</ScrollView>

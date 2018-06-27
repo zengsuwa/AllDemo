@@ -7,8 +7,10 @@ import android.view.SurfaceView;
 import android.view.View;
 import android.widget.Button;
 
+import com.zsw.zeng.helloapplication.activity.ActionActivity;
 import com.zsw.zeng.helloapplication.activity.AnimationActivity;
 import com.zsw.zeng.helloapplication.activity.ApkInfoActivity;
+import com.zsw.zeng.helloapplication.activity.PickerViewActivity;
 import com.zsw.zeng.helloapplication.activity.SchemeActivity;
 import com.zsw.zeng.helloapplication.activity.ServiceTestActivity;
 import com.zsw.zeng.helloapplication.activity.SurfaceActivity;
@@ -38,7 +40,10 @@ public class MainActivity extends Activity {
     private Button apkinfo;
     private Button scheme;
     private Button serviceTest;
+    private Button actionBtn;
+    private Button pickerViewBtn;
     private Intent intent;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,6 +60,8 @@ public class MainActivity extends Activity {
         apkinfo = (Button) findViewById(R.id.apkinfo);
         scheme = (Button) findViewById(R.id.scheme);
         serviceTest = (Button) findViewById(R.id.servicetest);
+        actionBtn = (Button) findViewById(R.id.actionBtn);
+        pickerViewBtn = (Button) findViewById(R.id.pickerViewBtn);
         noslide.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -75,7 +82,7 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 //跳转到沉浸式状态栏
-                intent = new Intent(MainActivity.this,StatusActivity.class);
+                intent = new Intent(MainActivity.this, StatusActivity.class);
                 startActivity(intent);
             }
         });
@@ -83,7 +90,7 @@ public class MainActivity extends Activity {
         mvp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //跳转到系统实现沉浸式状态栏
+                //跳转到MVP
                 intent = new Intent(MainActivity.this, MvpActivity.class);
                 startActivity(intent);
             }
@@ -149,6 +156,24 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 //Service学习
                 intent = new Intent(MainActivity.this, ServiceTestActivity.class);
+                startActivity(intent);
+            }
+        });
+        actionBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent();
+                intent.setClass(getApplicationContext(), ActionActivity.class);
+                intent.setAction("actionTest");
+                startActivity(intent);
+            }
+        });
+        pickerViewBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent();
+                intent.setClass(getApplicationContext(), PickerViewActivity.class);
+                intent.setAction("actionTest");
                 startActivity(intent);
             }
         });
